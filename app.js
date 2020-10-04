@@ -12,6 +12,13 @@ const FAKE_DATA = [
 ];
 
 
-d3.select('div')
+const container = d3.select('div')
     .classed('container', true)
     .style('border', '10px solid red');
+
+container
+    .selectAll('.bar')
+    .data(FAKE_DATA)
+    .enter()
+    .append('div')
+    .classed('bar', true);
