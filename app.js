@@ -1,12 +1,12 @@
 const FAKE_DATA = [
-    { id: 'bitcoin', value: 10021},
-    { id: 'etherum', value: 499},
-    { id: 'litecoin', value: 40},
-    { id: 'tether', value: 1},
-    { id: 'bitcoin cash', value: 200},
+    { id: 'bitcoin', value: 1},
+    { id: 'etherum', value: 2},
+    { id: 'litecoin', value: 3},
+    { id: 'tether', value: 4},
+    { id: 'bitcoin cash', value: 5},
     { id: 'xrp', value: 1},
-    { id: 'wrapped bitcoin', value: 100241},
-    { id: 'polkadot', value: 4499},
+    { id: 'wrapped bitcoin', value: 7},
+    { id: 'polkadot', value: 8},
     { id: 'chainlin', value: 9},
 
 ];
@@ -14,11 +14,13 @@ const FAKE_DATA = [
 
 const container = d3.select('div')
     .classed('container', true)
-    .style('border', '10px solid red');
+    .style('border', '1px solid red');
 
-container
+const bars = container
     .selectAll('.bar')
     .data(FAKE_DATA)
     .enter()
     .append('div')
-    .classed('bar', true);
+    .classed('bar', true)
+    .style('width', '50px')
+    .style('height', data => (data.value * 15) + 'px');
