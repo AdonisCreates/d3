@@ -12,15 +12,18 @@ const FAKE_DATA = [
 ];
 
 
-const container = d3.select('div')
-    .classed('container', true)
-    .style('border', '1px solid red');
+const container = d3.select('svg')
+    .classed('container', true);
 
 const bars = container
     .selectAll('.bar')
     .data(FAKE_DATA)
     .enter()
-    .append('div')
+    .append('rect')
     .classed('bar', true)
-    .style('width', '50px')
-    .style('height', data => (data.value * 15) + 'px');
+    .attr('width', 50)
+    .attr('height', data => (data.value * 15));
+
+    // cool things to know
+    // you cant use justifiy content or background use fill
+    // you dont use div you use svg
