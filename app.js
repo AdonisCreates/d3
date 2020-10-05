@@ -3,6 +3,10 @@ const FAKE_DATA = [
     { id: 'etherum', value: 9, region: 'Brazil'},
     { id: 'litecoin', value: 8, region: 'Eggs'},
     { id: 'tether', value: 10, region: 'Boom'},
+    { id: 'egg', value: 10, region: 'USA'},
+    { id: 'fdfd', value: 9, region: 'Brazil'},
+    { id: 'fdg', value: 8, region: 'Eggs'},
+    { id: 'tetdddher', value: 10, region: 'Boom'},
 ];
 
 // same width for all bars; uniform distrubution 
